@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:psbeducation"
+             x:Class="psbeducation.MainPage"
+             Background="White">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" >
+                <Entry Placeholder="Почта" BackgroundColor="#00008B" PlaceholderColor="Black" WidthRequest="350" ClearButtonVisibility="WhileEditing"/>
+                <Entry Placeholder="Пароль" BackgroundColor="#00008B" WidthRequest="350" PlaceholderColor="Black" IsPassword="True" ClearButtonVisibility="WhileEditing"/>
+                <local:RoundedEntry Text="Custom Entry"
+                            FontSize="30" />
+            </StackLayout>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Start" Grid.Row="2" >
+                <Button Text="Вход"  BorderColor="Black" BorderWidth="1" WidthRequest="350" BackgroundColor="#00008B" CornerRadius="50" Clicked="Interface_Frame"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
